@@ -1,4 +1,5 @@
 # Szín- és RGB-tippelő Játék
+**Régi fiókból visszaállítva**
 Angular CLI-val készült színtippelő játék a *Webprogramozás 2* kurzusra.
 
 Két játék érhető el:
