@@ -1,0 +1,8 @@
+<div class="game-container">
+    <div class="button-container">
+        <button class="page" (click)="setMode('color')">Guess the Color</button><button class="page" (click)="setMode('rgb')">Guess the RGB</button>
+    </div>
+    <app-game *ngIf="gameMode === 'color'"></app-game>
+    <app-rgb *ngIf="gameMode === 'rgb'"></app-rgb>
+</div>
+<router-outlet></router-outlet>

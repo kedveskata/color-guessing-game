@@ -1,0 +1,13 @@
+<h1>rgb({{ currentColor.rgbValue }})</h1>
+<p [style.color]="messageColor">{{ message }}</p>
+<h3>Guesses made so far: {{ wrongGuesses }}</h3>
+<button class="funcButton" (click)="setupGame()">Reset</button>
+<div class="color-boxes">
+  <div *ngFor="let color of colors" 
+        [ngStyle]="{'background-color': color.style}" 
+        [class.invisible]="!color.visible"
+        [class.disabled]="gameOver"
+        class="color-box"
+        (click)="checkColor(color)">
+  </div>
+</div>

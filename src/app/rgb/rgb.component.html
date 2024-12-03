@@ -1,0 +1,24 @@
+<p [style.color]="messageColor">{{ message }}</p>
+<p>You can reveal the solution by clicking on the color</p>
+<h3>Guesses made so far: {{ wrongGuesses }}</h3>
+<div class="rgb-container">
+    <div class="rgb-inner" [class.is-flipped]="isFlipped" (click)="toggleFlip()">
+        <div class="rgb-front" [style.background-color]="currentColor.style"></div>
+        <div class="rgb-back" [style.background-color]="currentColor.style">{{ currentColor.style }}</div>
+    </div>
+</div>
+<p>A 30 point difference is still okay &#128539;</p>
+<div class="rgb-input">
+    <h1>rgb(</h1>
+    <input type="text" [(ngModel)]="guess.r" placeholder="_">
+    <h1>,</h1>
+    <input type="text" [(ngModel)]="guess.g" placeholder="_">
+    <h1>,</h1>
+    <input type="text" [(ngModel)]="guess.b" placeholder="_">
+    <h1>)</h1>
+</div>
+<div class="button-container">
+    <button class="funcButton" (click)="checkColor()">Guess!</button>
+    <button class="funcButton" (click)="setupGame()">New Color</button>
+</div> 
+

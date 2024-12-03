@@ -1,0 +1,30 @@
+.color-boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+}
+
+.color-box.disabled {
+  transform: scale(1);
+  cursor: default;
+}
+
+.invisible {
+  visibility: hidden;
+}
